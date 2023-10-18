@@ -1,0 +1,215 @@
+
+.dsp-flex{
+  display: flex;
+}
+
+.h100{
+  height: 100%;
+}
+.w100{
+  width: 100%;
+}
+.pos-rel{
+  position: relative;
+}
+.wsp-nowrap{
+  white-space: nowrap;
+}
+.text-center{
+  text-align: center;
+}
+.center-data{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fw900{
+  font-weight: 900;
+}
+.bg-w{
+  background: white;
+  border-radius:8px;
+}
+.mar-l8{
+  margin-left: 8px;
+}
+.f-head{
+  font-size:1.3rem;
+}
+.clr-db{
+  color: #cac8c8;
+}
+ 
+.container{
+  height: 100vh;
+  width: calc(100vw - 15rem);
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  background: #f5f6f8;
+}
+
+.sidebar{
+  font-size: 1.8rem;
+  color:whitesmoke;
+  width: 15rem;
+  height: 100%;
+  background: #040440;
+  box-sizing: border-box;
+  padding: 10px 2rem;
+}
+
+.sidebar-menu-icon{
+  color: rgb(247, 247, 247);
+  border: solid 1px whitesmoke;
+  font-size: 1.2rem;
+  padding: 4px;
+  border-radius: 5px;
+  margin-right: 5px;
+  min-width: 1.2rem;
+}
+
+.single-menu{
+  font-size: 1.2rem;
+  height: 2.3rem;
+  line-height: 2.3rem;
+  margin: 2rem 0;
+}
+
+.header{
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  height: 30px;
+  padding: 9px;
+}
+
+.search-icon{
+  color: gray;
+  left: -23px;
+  position: absolute;
+  height: 14px;
+  /* font-size: 10px; */
+  padding: 5px;
+  box-sizing: border-box;
+  background: white;
+}
+.search-inp{
+  height: 22px;
+  width: 12rem;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+}
+
+.card-container{
+  max-width: calc(100vw - 20rem);
+  overflow: auto;
+  margin: 0 20px;
+}
+.single-card{
+  width: 500px;
+  background: white;
+  padding: 15px 10px;
+  margin: 25px 10px;
+  display: flex;
+  border-radius: 10px;
+}
+.card-logo{
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: blue;
+  display: flex;
+  align-items: center;
+}
+.card-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 5px;
+}
+
+
+.monthly-container{
+  height: 200px;
+  width: calc(100vw - 47rem);
+  overflow: auto;
+  background: white;
+  justify-content: space-between;
+}
+.single-month{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin: 0.5rem;
+  width: 3rem;
+}
+.customers{
+  width: 20rem;
+  margin: 0 4rem;
+}
+
+
+
+.sell-row{
+  display: flex;
+  height: 50px;
+  white-space: nowrap;
+}
+.product-container{
+  margin: 20px 2.5rem;
+  max-width: calc(100vw - 20rem);
+  overflow: auto;
+}
+.product-info{
+  width: calc(100vw - 50rem);
+  display: flex;
+  align-items: center;
+  min-width: 160px;
+}
+.product-subInfo{
+  min-width: 10rem;
+}
+.product-img{
+  width: 50px;
+  height: 30px;
+  border-radius: 5px;
+}
+
+
+@keyframes growProgressBar {
+  0%, 33% { --pgPercentage: 0; }
+  100% { --pgPercentage: var(--value); }
+}
+
+@property --pgPercentage {
+  syntax: '<number>';
+  inherits: false;
+  initial-value: 0;
+}
+
+div[role="progressbar"] {
+  --size: 12rem;
+  --fg: #369;
+  --bg: #def;
+  --pgPercentage: var(--value);
+  animation: growProgressBar 3s 1 forwards;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: 
+    radial-gradient(closest-side, white 80%, transparent 0 99.9%, white 0),
+    conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0)
+    ;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: calc(var(--size) / 5);
+  color: var(--fg);
+}
+
+div[role="progressbar"]::before {
+  counter-reset: percentage var(--value);
+  content: counter(percentage) '%';
+}
+
