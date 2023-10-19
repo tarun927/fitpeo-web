@@ -1,13 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faBagShopping, faNewspaper, faSackDollar, faWallet} from '@fortawesome/free-solid-svg-icons'
+import { cardInfo } from "../constants";
 export default function InfoCards() {
 
-  const cardInfo=[
-      {name:"Earning",icon:faSackDollar,amount:"$198k",info:"+27.8% this month",color:"#06ab4d",bg:"#e7fff2"},
-      {name:"Orders",icon:faNewspaper,amount:"$2.4k",info:"-2% this month",color:"#a409fe",bg:"#e7dbff"},
-      {name:"Balance",icon:faWallet,amount:"$2.4k",info:"-2% this month",color:"#095ac0",bg:"#ccf2ff"},
-      {name:"Total Sales",icon:faBagShopping,amount:"$89k",info:"+11% this month",color:"#dc1527",bg:"#fed8f3"}
-    ]
   return (
     <div className="card-container dsp-flex">
        {
